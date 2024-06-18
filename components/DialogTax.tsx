@@ -39,7 +39,7 @@ export function DialogDemo() {
     }, []);
 
     return (
-        <Dialog >
+        <Dialog  >
             <DialogTrigger asChild>
                 <Button variant="destructive" className="sm:text-xl lg:text-2xl text-lg">Edit Profile</Button>
             </DialogTrigger>
@@ -50,7 +50,9 @@ export function DialogDemo() {
                         Make changes to your profile here. Click save when  done.
                     </DialogDescription>
                 </DialogHeader>
+
                 <EditTask user={user} />
+
 
             </DialogContent>
         </Dialog>
