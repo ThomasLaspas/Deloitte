@@ -51,9 +51,9 @@ export function DialogDemo() {
                     </DialogDescription>
                 </DialogHeader>
 
-                <div className="sm:h-[100%] h-[85%] overflow-y-auto">
-                    <EditTask user={user} />
-                </div>
+
+                <EditTask user={user} />
+
             </DialogContent>
         </Dialog>
     )
