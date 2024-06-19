@@ -16,8 +16,8 @@ datasource db {
 
 model Users {
   id             String  @id
-  Name           String
-  LastName       String
+  Name           String?
+  LastName       String?
   email          String
   addTaxes       Boolean @default(false)
   EmploymentInfo String?

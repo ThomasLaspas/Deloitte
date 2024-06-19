@@ -11,7 +11,7 @@ const configuration = new OpenAI({
 
 const instructionMessage: ChatCompletionMessageParam = {
     role: 'system',
-    content: "You are a helpful assistant from ironman movie. FRIDAY. You have to act like her. Your main role is to give taxes advice with the data that will be received, your answer is better to be in one pargraph"
+    content: "You are a helpful assistant from ironman movie. FRIDAY. You have to act like her. Your main role is to give taxes advice for greek citizens with the data that will be received, advice for how should I adjust my assets to optimize my taxes or do I have any withholding tax obligations? and others  your answer only in this question with the best posible answer. at the end dont say if you have another question or smthing else just best regards or something like that"
 };
 
 export const Aigenerator = async () => {
@@ -29,7 +29,7 @@ export const Aigenerator = async () => {
         });
 
         if (!data2) {
-            throw new Error("User naot found")
+            throw new Error("User not found")
         }
 
         const userDataContent = `
@@ -39,7 +39,9 @@ export const Aigenerator = async () => {
             House Number: ${data2.houseNoumber || "Not provided"},
             Location: ${data2.location || "Not provided"},
             Married Status: ${data2.mariedStatus || "Not provided"},
-            Salary: ${data2.salary || "Not provided"}
+            Salary: ${data2.salary || "Not provided"},
+            My name:${data2.Name || data2.email}
+                
         `;
 
         const userMessage: ChatCompletionMessageParam = {

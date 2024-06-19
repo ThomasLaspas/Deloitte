@@ -28,13 +28,14 @@ export async function GET(request: NextRequest) {
                 data: {
                     id: user.id,
                     email: user.emailAddresses[0].emailAddress,
-                    Name: user.firstName!,
-                    LastName: user.lastName!,
+                    Name: user.firstName||null,
+                    LastName: user.lastName||null,
                 },
             });
             console.log("User created successfully");
             return NextResponse.redirect(new URL('/', request.url));
         }
+        revalidatePath("/")
         
 
         return NextResponse.redirect(new URL('/', request.url));
