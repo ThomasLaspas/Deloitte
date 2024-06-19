@@ -29,6 +29,6 @@ export default async function Home() {
         <div className="flex items-center justify-center "> <Aiadvice /></div>
 
 
-      </div> : <div className="border-2 rounded-xl border-primary p-5 text-center lg:w-1/2 sm:w-4/6  w-full"><CreateForm /></div>}</div>
+      </div> : <><h1 className="sm:text-3xl lg:text-4xl text-lg text-center mt-5">Fill the form bellow with your personal info, to help us give you better tax advice</h1><div className="border-2 rounded-xl border-primary p-5 text-center lg:w-1/2 sm:w-4/6  w-full mt-[5%]"><CreateForm /></div></>}</div>
   );
 }
