@@ -26,9 +26,9 @@ function Aiadvice() {
         })
     }
     return (
-        <div className='w-full text-center grid place-items-center gap-7'>
+        <div className='w-full text-center grid place-items-center gap-7 sm:pb-0 pb-5'>
             <Button className="sm:text-xl lg:text-2xl text-lg" onClick={aitax} disabled={pedding}> tax advice</Button>
-            {advice ? <div className="sm:w-4/6 w-full p-6 rounded-3xl gap-x-6 bg-primary text-black border-black text-justify overflow-auto " >
+            {advice ? <div className="sm:w-4/6 w-full p-6 rounded-3xl gap-x-6 bg-primary text-black border-black text-justify overflow-auto" >
                 <TextGenerateEffect className=" text-center" words={advice} />
             </div> : null}
         </div>
